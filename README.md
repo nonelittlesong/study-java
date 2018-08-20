@@ -5,4 +5,4 @@
 
 **wiki**  
 * [build.gradle配置](https://github.com/nonelittlesong/study-java/wiki/build.gradle)
-* [jni]()
+* [jni](https://github.com/nonelittlesong/study-java/wiki/jni)

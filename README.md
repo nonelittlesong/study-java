@@ -8,7 +8,7 @@
 * [jni](https://github.com/nonelittlesong/study-java/wiki/jni)
 
 ## troubleshooting
-More than one file was found with OS independent path 'lib/armeabi-v7a/xxxx.so'
+#### More than one file was found with OS independent path 'lib/armeabi-v7a/xxxx.so'
 从Android studio 2.2 升级到 3.0 +，gradle 也升级到3.0+, 恰好你也使用了CMakeList 来管理编译JNI代码，恰好你遇到了这个问题：More than one file was found with OS independent path 'lib/armeabi-v7a/xxxx.so'  
 看看CMakeList 文件中有没有指定 OUTPUT目录到 jniLibs, 如下面的代码：  
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI})  

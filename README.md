@@ -15,7 +15,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/src/main/jniLibs/${ANDR
 直接把这行指定输出目录的代码干掉吧！希望能帮到你。  
 网上搜了一大圈，大部分看到的是由于so库在libs目录下和jniLibs目录下的冲突，没有找到与我类似的问题。可能是gradle升级后，会默认将编译出来的so库打包进apk，而不需要像以前一样将编译后的so库输出到jniLibs下再进行打包。  
 
-## AppCompatEditText cant resolve
+#### AppCompatEditText cant resolve
 build.gradle->dependencies
 ```
 implementation 'com.android.support:appcompat-v7:28.0.0-rc01'

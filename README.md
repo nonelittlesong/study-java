@@ -22,7 +22,7 @@ implementation 'com.android.support:appcompat-v7:28.0.0-rc01'
 ```
 ### Failed to load AppCompat ActionBar with unknown error. 
 在项目Project中找到\app\src\main\res\values\styles.xml文件  
-把
+把  
 `<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">`  
-改为
+改为  
 `<style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">`

@@ -7,7 +7,7 @@
 * [build.gradle配置](https://github.com/nonelittlesong/study-java/wiki/build.gradle)
 * [jni](https://github.com/nonelittlesong/study-java/wiki/jni)
 * [AS的ImageView转Bitmap](https://github.com/nonelittlesong/study-java/wiki/ImageViewtoBitmap)
-* 
+* [AS的Bitmap转Pixels](https://github.com/nonelittlesong/study-java/wiki/BitmaptoPixels)
 
 ## troubleshooting
 ### More than one file was found with OS independent path 'lib/armeabi-v7a/xxxx.so'

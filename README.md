@@ -29,3 +29,44 @@ implementation 'com.android.support:appcompat-v7:28.0.0-rc01'
 `<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">`  
 改为  
 `<style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">`
+### A/DEBUG: backtrace:
+```
+--------- beginning of crash
+09-03 14:06:53.394 1837-1837/? A/DEBUG: backtrace:
+        #00 pc 0000144a  /data/app/com.faceattributes-ZfGInDEl3wVcT8yaomkQNw==/lib/arm/libnative-lib.so (Java_com_faceattributes_NativeFunction_nativeRgba+509)
+        #01 pc 003e4679  /system/lib/libart.so (art_quick_generic_jni_trampoline+40)
+        #02 pc 003e0931  /system/lib/libart.so (art_quick_invoke_stub_internal+64)
+        #03 pc 003e4fa9  /system/lib/libart.so (art_quick_invoke_static_stub+224)
+        #04 pc 000ac303  /system/lib/libart.so (_ZN3art9ArtMethod6InvokeEPNS_6ThreadEPjjPNS_6JValueEPKc+182)
+        #05 pc 001f27fb  /system/lib/libart.so (_ZN3art11interpreter34ArtInterpreterToCompiledCodeBridgeEPNS_6ThreadEPNS_9ArtMethodEPKNS_7DexFile8CodeItemEPNS_11ShadowFrameEPNS_6JValueE+238)
+        #06 pc 001edd71  /system/lib/libart.so (_ZN3art11interpreter6DoCallILb0ELb0EEEbPNS_9ArtMethodEPNS_6ThreadERNS_11ShadowFrameEPKNS_11InstructionEtPNS_6JValueE+576)
+        #07 pc 003cb927  /system/lib/libart.so (MterpInvokeStatic+322)
+        #08 pc 003d2d94  /system/lib/libart.so (ExecuteMterpImpl+14612)
+        #09 pc 001d5351  /system/lib/libart.so (_ZN3art11interpreterL7ExecuteEPNS_6ThreadEPKNS_7DexFile8CodeItemERNS_11ShadowFrameENS_6JValueEb+340)
+        #10 pc 001da6a3  /system/lib/libart.so (_ZN3art11interpreter33ArtInterpreterToInterpreterBridgeEPNS_6ThreadEPKNS_7DexFile8CodeItemEPNS_11ShadowFrameEPNS_6JValueE+142)
+        #11 pc 001edd5b  /system/lib/libart.so (_ZN3art11interpreter6DoCallILb0ELb0EEEbPNS_9ArtMethodEPNS_6ThreadERNS_11ShadowFrameEPKNS_11InstructionEtPNS_6JValueE+554)
+        #12 pc 003cb4a3  /system/lib/libart.so (MterpInvokeInterface+1210)
+        #13 pc 003d2e14  /system/lib/libart.so (ExecuteMterpImpl+14740)
+        #14 pc 001d5351  /system/lib/libart.so (_ZN3art11interpreterL7ExecuteEPNS_6ThreadEPKNS_7DexFile8CodeItemERNS_11ShadowFrameENS_6JValueEb+340)
+        #15 pc 001da6a3  /system/lib/libart.so (_ZN3art11interpreter33ArtInterpreterToInterpreterBridgeEPNS_6ThreadEPKNS_7DexFile8CodeItemEPNS_11ShadowFrameEPNS_6JValueE+142)
+        #16 pc 001edd5b  /system/lib/libart.so (_ZN3art11interpreter6DoCallILb0ELb0EEEbPNS_9ArtMethodEPNS_6ThreadERNS_11ShadowFrameEPKNS_11InstructionEtPNS_6JValueE+554)
+        #17 pc 003ca871  /system/lib/libart.so (MterpInvokeVirtual+440)
+        #18 pc 003d2c14  /system/lib/libart.so (ExecuteMterpImpl+14228)
+        #19 pc 001d5351  /system/lib/libart.so (_ZN3art11interpreterL7ExecuteEPNS_6ThreadEPKNS_7DexFile8CodeItemERNS_11ShadowFrameENS_6JValueEb+340)
+        #20 pc 001da6a3  /system/lib/libart.so (_ZN3art11interpreter33ArtInterpreterToInterpreterBridgeEPNS_6ThreadEPKNS_7DexFile8CodeItemEPNS_11ShadowFrameEPNS_6JValueE+142)
+        #21 pc 001edd5b  /system/lib/libart.so (_ZN3art11interpreter6DoCallILb0ELb0EEEbPNS_9ArtMethodEPNS_6ThreadERNS_11ShadowFrameEPKNS_11InstructionEtPNS_6JValueE+554)
+        #22 pc 003cb4a3  /system/lib/libart.so (MterpInvokeInterface+1210)
+        #23 pc 003d2e14  /system/lib/libart.so (ExecuteMterpImpl+14740)
+        #24 pc 001d5351  /system/lib/libart.so (_ZN3art11interpreterL7ExecuteEPNS_6ThreadEPKNS_7DexFile8CodeItemERNS_11ShadowFrameENS_6JValueEb+340)
+        #25 pc 001da5f1  /system/lib/libart.so (_ZN3art11interpreter30EnterInterpreterFromEntryPointEPNS_6ThreadEPKNS_7DexFile8CodeItemEPNS_11ShadowFrameE+92)
+        #26 pc 003c0fbd  /system/lib/libart.so (artQuickToInterpreterBridge+944)
+        #27 pc 003e46f1  /system/lib/libart.so (art_quick_to_interpreter_bridge+32)
+        #28 pc 003e0931  /system/lib/libart.so (art_quick_invoke_stub_internal+64)
+        #29 pc 003e4ea3  /system/lib/libart.so (art_quick_invoke_stub+226)
+        #30 pc 000ac2d9  /system/lib/libart.so (_ZN3art9ArtMethod6InvokeEPNS_6ThreadEPjjPNS_6JValueEPKc+140)
+        #31 pc 00334bb1  /system/lib/libart.so (_ZN3artL18InvokeWithArgArrayERKNS_33ScopedObjectAccessAlreadyRunnableEPNS_9ArtMethodEPNS_8ArgArrayEPNS_6JValueEPKc+52)
+        #32 pc 00335a2d  /system/lib/libart.so (_ZN3art35InvokeVirtualOrInterfaceWithJValuesERKNS_33ScopedObjectAccessAlreadyRunnableEP8_jobjectP10_jmethodIDP6jvalue+320)
+        #33 pc 00353ae9  /system/lib/libart.so (_ZN3art6Thread14CreateCallbackEPv+892)
+        #34 pc 000486cf  /system/lib/libc.so (_ZL15__pthread_startPv+22)
+        #35 pc 0001b02f  /system/lib/libc.so (__start_thread+32)
+```

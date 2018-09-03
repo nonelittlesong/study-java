@@ -70,3 +70,4 @@ implementation 'com.android.support:appcompat-v7:28.0.0-rc01'
         #34 pc 000486cf  /system/lib/libc.so (_ZL15__pthread_startPv+22)
         #35 pc 0001b02f  /system/lib/libc.so (__start_thread+32)
 ```
+造成这种错误的可能原因是native方法的java原型和cpp实现的`返回类型不同`  

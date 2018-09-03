@@ -8,6 +8,7 @@
 * [jni](https://github.com/nonelittlesong/study-java/wiki/jni)
 * [AS的ImageView转Bitmap](https://github.com/nonelittlesong/study-java/wiki/ImageViewtoBitmap)
 * [AS的Bitmap转Pixels](https://github.com/nonelittlesong/study-java/wiki/BitmaptoPixels)
+* [Android权限](https://github.com/nonelittlesong/study-java/wiki/checkSelfPermission)
 
 ## troubleshooting
 ### More than one file was found with OS independent path 'lib/armeabi-v7a/xxxx.so'

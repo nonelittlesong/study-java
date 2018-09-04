@@ -77,3 +77,7 @@ onRequestPermissionsResult只会调用一次，获取权限代码参考：https:
 https://www.cnblogs.com/kungfupanda/p/7747004.html  
 https://blog.csdn.net/chuyouyinghe/article/details/72833502  
         
+### Didn't find class "android.view.View$OnUnhandledKeyEventListener"
+https://blog.csdn.net/qinkaiyuan94/article/details/81880019  
+https://blog.csdn.net/weixin_37651459/article/details/80956366  
+

@@ -73,3 +73,7 @@ implementation 'com.android.support:appcompat-v7:28.0.0-rc01'
 造成这种错误的可能原因是native方法的java原型和cpp实现的`返回类型不同`  
 ### android权限申请失败
 onRequestPermissionsResult只会调用一次，获取权限代码参考：https://www.jianshu.com/p/e84e8c9f9912  
+### ArrayList<String> 转 String[]
+https://www.cnblogs.com/kungfupanda/p/7747004.html  
+https://blog.csdn.net/chuyouyinghe/article/details/72833502  
+        

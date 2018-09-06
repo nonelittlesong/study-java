@@ -81,3 +81,6 @@ https://blog.csdn.net/chuyouyinghe/article/details/72833502
 https://blog.csdn.net/qinkaiyuan94/article/details/81880019  
 https://blog.csdn.net/weixin_37651459/article/details/80956366  
 
+### Bitmap not large enough to support new configurations
+Bitmap.setHeight() 和 Bitmap.setWidth()之后  
+Bitmap的大小不能超过原来的大小  

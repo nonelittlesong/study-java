@@ -1,3 +1,5 @@
+参考：  
+* http://logging.apache.org/log4j/2.x/  
 
 ## 三大组件
 1. Logger:  

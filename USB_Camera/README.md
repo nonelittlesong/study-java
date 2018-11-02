@@ -9,3 +9,6 @@ project的build.gradle加入
 ```
 maven { url 'http://raw.github.com/saki4510t/libcommon/master/repository/' }
 ```
+
+## Troubleshooting
+### Execution failed for task ':app:transformClassesWithDexBuilderForDebug'.

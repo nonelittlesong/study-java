@@ -22,3 +22,12 @@ android {
     }
 }
 ```
+### You need to use a Theme.AppCompat theme
+https://blog.csdn.net/lincyang/article/details/42673151  
+```
+<application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat" >
+```

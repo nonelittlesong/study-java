@@ -1,5 +1,6 @@
 参考：  
 * https://github.com/saki4510t/UVCCamera  
+* https://developer.android.com/studio/projects/gradle-external-native-builds  
 
 ## 导入.aar
 https://blog.csdn.net/maiduoudo/article/details/79217151  

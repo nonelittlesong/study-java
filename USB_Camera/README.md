@@ -3,6 +3,19 @@
 
 ## 导入.aar
 https://blog.csdn.net/maiduoudo/article/details/79217151  
+在app目录下的build.gradle文件中添加以下代码：  
+```
+android {
+    repositories {
+        flatDir {
+            dirs 'libs' 
+        } 
+    } 
+} 
+dependencies {
+    implementation(name: 'lyx-library-1.0.3', ext: 'aar')
+}
+```
 
 ## 导入module
 需要添加project.properties文件，内容是`android.library=true`

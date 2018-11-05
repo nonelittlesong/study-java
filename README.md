@@ -4,7 +4,7 @@
 * https://docs.gradle.org/current/userguide/userguide.html
 
 **wiki**  
-* [build.gradle配置](https://github.com/nonelittlesong/study-java/wiki/build.gradle)
+* [build.gradle和JNI和NDK](https://github.com/nonelittlesong/study-java/wiki/build.gradle)
 * [jni](https://github.com/nonelittlesong/study-java/wiki/jni)
 * [AS的ImageView转Bitmap](https://github.com/nonelittlesong/study-java/wiki/ImageViewtoBitmap)
 * [AS的Bitmap转Pixels](https://github.com/nonelittlesong/study-java/wiki/BitmaptoPixels)

@@ -1,6 +1,9 @@
 参考：  
 * https://github.com/saki4510t/UVCCamera  
 
+## 导入.aar
+https://blog.csdn.net/maiduoudo/article/details/79217151  
+
 ## 导入module
 需要添加project.properties文件，内容是`android.library=true`
 

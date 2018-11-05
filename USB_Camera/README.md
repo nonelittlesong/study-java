@@ -47,3 +47,6 @@ https://blog.csdn.net/lincyang/article/details/42673151
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat" >
 ```
+### module版本高于项目
+https://www.jianshu.com/p/f7778668c93f  
+https://www.cnblogs.com/rabtor/p/4410057.html  

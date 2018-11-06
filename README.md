@@ -84,3 +84,14 @@ https://blog.csdn.net/weixin_37651459/article/details/80956366
 ### Bitmap not large enough to support new configurations
 Bitmap.setHeight() 和 Bitmap.setWidth()之后  
 Bitmap的大小不能超过原来的大小  
+
+### Failed to load AppCompat ActionBar with unknown error.
+styles.xml  
+```
+<resources>
+	<!-- Base application theme. -->
+	<style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+		<!-- Customize your theme here. -->
+	</style>
+</resources>
+```

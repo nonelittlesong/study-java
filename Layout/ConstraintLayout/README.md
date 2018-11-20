@@ -33,4 +33,4 @@ app:layout_constraintHorizontal_chainStyle="spread_inside" // Spread Inside Chai
 app:layout_constraintHorizontal_chainStyle="packed" // Packed Chain
 app:layout_constraintHorizontal_bias="0" // Packed Chain with Bias
 ```
-(https://github.com/nonelittlesong/study-java/blob/master/Layout/ConstraintLayout/imgs/Screenshot%20from%202018-11-20%2009-53-31.png)
+![images](https://github.com/nonelittlesong/study-java/blob/master/Layout/ConstraintLayout/imgs/Screenshot%20from%202018-11-20%2009-53-31.png)

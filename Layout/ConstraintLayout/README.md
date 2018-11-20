@@ -137,3 +137,5 @@ Guideline具有以下三种定位方式：
     android:visibility="visible"
     app:constraint_referenced_ids="bt1,bt2"/>
 ```
+## 9. PlaceHolder (占位符)
+PlaceHolder用于和一个视图关联起来，通过setContentId()方法将占位符转换为指定的视图。

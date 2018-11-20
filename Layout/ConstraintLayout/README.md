@@ -52,7 +52,7 @@ layout_goneMarginBottom
 layout_goneMarginLeft
 layout_goneMarginRight
 ```
-## 6. 百分比布局
+## 6. 宽高比
 我们经常会遇到这样的需求，个人主页的顶部的背景图片宽高比为16:9  
 要使用`app:layout_constraintDimensionRatio="H,16:9"`，至少要将宽/高之一设为0dp  
 ```
@@ -87,4 +87,52 @@ Guideline具有以下三种定位方式：
 * layout_constraintGuide_end
 * layout_constraintGuide_percent
 
-## 7. Barrier
+## 7. Barrier (分界线）
+```
+<TextView 
+    android:id="@+id/tv_name" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:text="姓名：" 
+    app:layout_constraintBottom_toBottomOf="@+id/et_name" 
+    app:layout_constraintTop_toTopOf="@+id/et_name"/> 
+<TextView 
+    android:id="@+id/tv_contract" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:layout_marginTop="8dp" 
+    android:text="联系方式：" 
+    app:layout_constraintBottom_toBottomOf="@+id/et_contract" 
+    app:layout_constraintTop_toTopOf="@+id/et_contract"/> 
+<EditText 
+    android:id="@+id/et_name" 
+    android:layout_width="0dp" 
+    android:layout_height="wrap_content" 
+    android:hint="请输入姓名" 
+    app:layout_constraintLeft_toLeftOf="@+id/barrier" 
+    app:layout_constraintRight_toRightOf="parent" 
+    app:layout_constraintTop_toTopOf="parent"/> 
+<EditText 
+    android:id="@+id/et_contract" 
+    android:layout_width="0dp" 
+    android:layout_height="wrap_content" 
+    android:hint="请输入联系方式" 
+    app:layout_constraintLeft_toLeftOf="@+id/barrier" 
+    app:layout_constraintRight_toRightOf="parent" 
+    app:layout_constraintTop_toBottomOf="@+id/et_name"/> 
+<android.support.constraint.Barrier 
+    android:id="@+id/barrier" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    app:barrierDirection="right" 
+    app:constraint_referenced_ids="tv_name,tv_contract"/>
+```
+## 8. Group (组)
+控制多个控件的可见性  
+```
+<android.support.constraint.Group
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    app:constraint_referenced_ids="bt1,bt2"/>
+```

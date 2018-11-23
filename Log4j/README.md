@@ -155,3 +155,7 @@ off > fatal > error > warn > info > debug > trace > all
         </Root>
     </Loggers>
 </Configuration>
+```
+* ACCEPT 放行
+* DENY 拒绝
+* NEUTRAL 不做任何操作

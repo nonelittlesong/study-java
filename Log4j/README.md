@@ -57,3 +57,34 @@ additivity="true", 表示会将当前logger特性传递给Root。
 ## 3. 按时生成日志，日志过大拆分
 ```
 <?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="300">
+    <properties>
+        <property name="LOG_HOME">D:/logs</property>
+        <property name="FILE_NAME">tim</property>
+    </properties>
+    
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+        <RollingRandomAccessFile name="TimFile" fileName="${LOG_HOME}/${FILE_NAME}.log
+            filePattern="${LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME}-%d{yyyy-MM-dd HH-mm}-%i.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" />
+                <SizeBasedTriggeringPolicy size="1024MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20" />
+        </RollingRandomAccessFile>   
+    </Appenders>
+    
+    <Loggers>
+        <Logger name="timlog" level="trace" additivity="false">
+            <AppenderRef ref="TimFile"/>
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+</Configuration>
+```

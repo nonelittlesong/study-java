@@ -4,3 +4,4 @@
 * https://github.com/fengzhizi715/SAF-Kotlin-log
 * https://github.com/danylovolokh/VoNaLogger
 * https://github.com/tony19/logback-android
+* https://github.com/vbauer/herald

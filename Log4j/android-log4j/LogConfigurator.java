@@ -17,8 +17,11 @@ import org.apache.log4j.helpers.LogLog;
  * @author Rolf Kulemann
  */
 public class LogConfigurator {
+	/**
+	 * 一些默认的参数
+	 */
 	private Level rootLevel = Level.DEBUG;
-	private String filePattern = "%d - [%p::%c::%C] - %m%n";
+	private String filePattern = "%d - [%p::%c::%C] - %m%n"; 
 	private String logCatPattern = "%m%n";
 	private String fileName = "android-log4j.log";
 	private int maxBackupSize = 5;

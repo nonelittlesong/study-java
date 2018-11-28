@@ -1,5 +1,6 @@
 
 ## DatePattern
+
 | ------ |
 | '.'yyyy-MM |
 | '.'yyyy-ww |

@@ -25,9 +25,11 @@ loger可以包含零个或多个appender-ref。
 属性：  
 * name appender的名字  
 * class appender的类  
+
 ConsoleAppender的字节点：  
 * encoder 格式化  
 * target System.out或System.err,默认System.out  
+
 FileAppender的字节点：  
 * file 被写入的文件名，可以是绝对目录和相对目录，如果上级目录不存在会自动创建，没有默认值。  
 * append 默认true。

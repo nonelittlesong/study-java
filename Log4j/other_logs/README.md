@@ -45,5 +45,6 @@ loger可以包含零个或多个appender-ref。
 **TimeBasedRollingPolicy:**  
 字节点：  
 * fileNamePattern %d的默认格式yyyy-MM-dd。RollingFileAppender的file字节点可有可无，通过设置file，可以为活动文件和归档文件指定不同的位置，当前日志总是记录到file指定的文件（活动文件），活动文件的名字不会改变;如果没有设置file，活动文件的名字会根据fileNamePattern的值，每隔一段时间改变一次。  
+   e.g. /foo/%d{yyyy-MM,aux}/%d.log
 * maxHistory 控制保留归档文件的最大数量。  
 

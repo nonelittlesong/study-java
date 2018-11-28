@@ -1,8 +1,8 @@
 
 ## DatePattern
-| '.'yyyy-MM |
-| '.'yyyy-ww |
-| '.'yyyy-MM-dd |
-|'.'yyyy-MM-dd-a |
-| '.'yyyy-MM-dd-HH |
-| '.'yyyy-MM-dd-HH-mm |
+| '.'yyyy-MM | hh |
+| '.'yyyy-ww | f |
+| '.'yyyy-MM-dd | f |
+|'.'yyyy-MM-dd-a | f |
+| '.'yyyy-MM-dd-HH | f |
+| '.'yyyy-MM-dd-HH-mm | f |

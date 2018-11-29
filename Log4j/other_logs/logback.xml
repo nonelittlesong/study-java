@@ -2,7 +2,7 @@
 <configuration debug="true">
     <property name="LOG_HOME" value="/storage/emulated/0/mtcnn/logs/java" />
 
-    <!-- logcat -->
+    <!-- logcat 只有在android-logback中可用-->
     <appender name="logcat" class="ch.qos.logback.classic.android.LogcatAppender">
         <tagEncoder>
             <pattern>%logger{64}</pattern>
@@ -32,7 +32,7 @@
         <file>${LOG_HOME}${file.separator}current_error.log</file>
         <append>true</append>
         <encoder>
-            <pattern>
+            <pattern> <!-- 右括号需要'\'转义 -->
                 %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{64}(%method\) - %msg%n
             </pattern>
         </encoder>

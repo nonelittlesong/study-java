@@ -8,7 +8,7 @@
 5. 创建Context  
 6. 指定当前的环境为绘制环境  
 
+## EGL10
 ## EGLDisplay
 ## EGLSurface
 ## EGLContext
-## EGL10

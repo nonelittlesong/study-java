@@ -16,7 +16,34 @@
    }
    ```
 3. 选择Config  
+   ```java
+   int[] configsCount = new int[1];
+   EGLConfig[] configs = new EGLConfig[1];
+   int[] configSpec = {
+           EGL10.EGL_RENDERABLE_TYPE,
+           EGL_OPENGL_ES2_BIT,
+           EGL10.EGL_RED_SIZE, 8,
+           EGL10.EGL_GREEN_SIZE, 8,
+           EGL10.EGL_BLUE_SIZE, 8,
+           EGL10.EGL_ALPHA_SIZE, 8,
+           EGL10.EGL_DEPTH_SIZE, 0,
+           EGL10.EGL_STENCIL_SIZE, 0,
+           EGL10.EGL_NONE
+   };
+
+   EGLConfig eglConfig = null;
+   if (!egl10.eglChooseConfig(eglDisplay, configSpec, configs, 1, configsCount)) {
+       throw new IllegalArgumentException("eglChooseConfig failed " +
+               android.opengl.GLUtils.getEGLErrorString(egl10.eglGetError()));
+   } else if (configsCount[0] > 0) {
+       eglConfig = configs[0];
+   }
+   if (eglConfig == null) {
+       throw new RuntimeException("eglConfig not initialized");
+   }
+   ```
 4. 创建Surface  
+
 5. 创建Context  
 6. 指定当前的环境为绘制环境  
 

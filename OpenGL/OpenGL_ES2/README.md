@@ -56,9 +56,14 @@
    }
    ```
 5. 创建Context  
+   ```java
+   int[] attrib_list = {EGL_CONTEXT_CLIENT_VERSION, 2, EGL10.EGL_NONE};
+   eglContext = egl10.eglCreateContext(eglDisplay, eglConfig, EGL10.EGL_NO_CONTEXT, attrib_list);
+   ```
 6. 指定当前的环境为绘制环境  
-
-## EGL10
-## EGLDisplay
-## EGLSurface
-## EGLContext
+   ```java
+   if (!egl10.eglMakeCurrent(eglDisplay, eglSurface, eglSurface, eglContext)) {
+       throw new RuntimeException("eglMakeCurrent failed " +
+               android.opengl.GLUtils.getEGLErrorString(egl10.eglGetError()));
+   }
+   ```

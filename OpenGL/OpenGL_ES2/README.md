@@ -43,7 +43,18 @@
    }
    ```
 4. 创建Surface  
-
+   ```java
+   eglSurface = egl10.eglCreateWindowSurface(eglDisplay, eglConfig, texture, null);
+   if (eglSurface == null || eglSurface == EGL10.EGL_NO_SURFACE) {
+       int error = egl10.eglGetError();
+       if (error == EGL10.EGL_BAD_NATIVE_WINDOW) {
+           Log.e(TAG, "eglCreateWindowSurface returned EGL10.EGL_BAD_NATIVE_WINDOW");
+           return;
+       }
+       throw new RuntimeException("eglCreateWindowSurface failed " +
+               android.opengl.GLUtils.getEGLErrorString(error));
+   }
+   ```
 5. 创建Context  
 6. 指定当前的环境为绘制环境  
 

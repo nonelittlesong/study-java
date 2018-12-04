@@ -1,7 +1,7 @@
 参考：  
 [Android OpenGL ES从零开始的Demo](https://github.com/doggycoder/AndroidOpenGLDemo)  
 ## EGL使用步骤
-1. 取得EGL实例  
+1. 取得EGL实例`egl10 = (EGL10) EGLContext.getEGL();`  
 2. 选择Display  
 3. 选择Config  
 4. 创建Surface  

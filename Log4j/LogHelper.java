@@ -169,6 +169,31 @@ import com.lowagie.text.pdf.PdfWriter;
 
 public class GeneratePDF {
     public static void main(String[] args) {
-        OutputStream file = new FileOutputStream(new File("C:\\Test.pdf"));
-        Document document = new Document();
-        PdfWriter.getInstance
+        try {
+            OutputStream file = new FileOutputStream(new File("C:\\Test.pdf"));
+            Document document = new Document();
+            PdfWriter.getInstance
+            document.open();
+            document.add(new Paragraph("Hello Kiran"));
+            document.add(new Paragraph(new Date().toString()));
+        
+            document.close();
+            file.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+/**
+ * 11. HTTP代理设置
+ */
+System.getProperties().put("http.proxyHost", "someProxyURL");
+System.getProperties().put("http.proxyPort", "someProxyPort");
+System.getProperties().put("http.proxyUser", "someUserName");
+System.getProeprties().put("http.proxyPassword", "somePassword");
+
+/**
+ * 12. 单例
+ */ 
+// 

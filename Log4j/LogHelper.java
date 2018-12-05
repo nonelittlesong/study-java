@@ -301,3 +301,158 @@ public class ZipIt {
     }
 }
 
+/**
+ * 16. 解析/读取XML
+ */
+// xml
+/*
+<?xml version="1.0"?> 
+<students> 
+    <student> 
+        <name>John</name> 
+        <grade>B</grade> 
+        <age>12</age> 
+    </student> 
+    <student> 
+        <name>Mary</name> 
+        <grade>A</grade> 
+        <age>11</age> 
+    </student> 
+    <student> 
+        <name>Simon</name> 
+        <grade>A</grade> 
+        <age>18</age> 
+    </student> 
+</students>
+*/
+// java
+import java.io.File;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+public class XMLParser {
+    public void getAllUserNames(String fileName) {
+        try {
+            DocumentDuilderFactory dbf = DocumentBuilderFactory.newInstance();
+            DocumentBuilder db = dbf.newDocumentBuilder();
+            File file = new File(fileName);
+            if (file.exists()) {
+                Document doc = db.parse(file);
+                Element docEle = doc.getDocumentElement();
+                
+                // Print root element of the document
+                System.out.println("Root element of the document: " + docEle.getNodeName());
+                
+                NodeList studentList = docEle.getElementsByTagName("student");
+                // Print total student elements in document
+                System.out.println("Total students: " + studentList.getLength());
+                if (studentList != null && studentList.getLength() > 0) {
+                    for (int i = 0; i < studentList.getLength(); i++) {
+                        Node node = studentList.item(i);
+                        if (node.getNodeType() == Node.ElEMENT_NODE) {
+                            System.out.println("==========================");
+                            Element e = (Element) node;
+                            NodeList nodeList = e.getElementsByTagName("name");
+                            System.out.println("Name: " + nodeList.item(0).getChildNodes().item(0).getNodeValue());
+                            nodeList = e.getElementsByTagName("grade");
+                            System.out.println("Grade: " + nodeList.item(0).getChildNodes().item(0).getNodeValue());
+                            nodeList = e.getElementsByTagName("age");
+                            System.out.println("Age: " + nodeList.item(0).getChildNodes().item(0).getNodeValue());
+                        }
+                    }
+                } else {
+                    System.exit(1);
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }   
+}
+                          
+/**
+ * 17. 把Array转换成Map
+ */
+import java.util.Map;
+import org.apache.commons.lang.ArrayUtils;
+
+public class Main {
+    public static void main(String[] args) {
+        String[][] countries = {{"United States", "New York"}, {"United Kingdom", "London"},
+                                {"Netherland", "Amsterdam"}, {"Japan", "Tokyo"}, {"France", "Paris"}};
+        Map countryCapitals = ArrayUtils.toMap(countries);
+    }
+}
+
+/**
+ * 18. 发送邮件
+ */
+import javax.mail.*;
+import javax.mail.internet.*;
+import java.util.*;
+
+public void postMail(String recipients[], String subject, String message, String from) throws MessagingException {
+    boolean debug = false;
+    // Set the host smtp address
+    Properties props = new Properties();
+    props.put("mail.smtp.host", "smtp.example.com");
+    // create some properties and get the default Session
+    Session session = Session.getDefaultInstance(props, null);
+    session.setDebug(debug);
+    // create a message
+    Message msg = new MimeMessage(session);
+    // set the from and to address
+    InternetAddress addressFrom = new InternetAddress(from);
+    msg.setFrom(addressFrom);
+    InternetAddress addressTo = new InternetAddress[recipients.length];
+    for (int i = 0; i < recipients.length; i++) {
+        addressTo[i] = new InternetAddress(recipients[i]);
+    }
+    msg.setRecipients(Message.RecipientType.TO, addressTo);
+    
+    // Optional: you can also set your custom headers in the email if you want
+    msg.addHeader("MyHeaderName", "myHeaderValue");
+    // setting the subject and content type
+    msg.setSubject(subject);
+    Transport.send(msg);
+}
+
+/**
+ * 19. 发送带数据的HTTP请求
+ */
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URL;
+public class Main {
+    public static void main(String[] args) {
+        try {
+            URL my_url = new URL("http://coolshell.cn/");
+            BufferedReader br = new BufferedReader(new InputStreamReader(my_url.openStream()));
+            String strTemp = "";
+            while(null != (strTemp = br.readLine())) {
+                System.out.println(strTemp);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+}
+
+/**
+ * 20. 改变数组大小
+ */
+private static Object resizeArray(Object oldArray, int newSize) {
+    int oldSize = java.lang.reflect.Array.getLength(oldArray);
+    Class elementType = oldArray.getClass().getComponentType();
+    Object newArray = java.lang.reflect.Array.newInstance(elementType, newSize);
+    int preserveLength = Math.min(oldSize, newSize);
+    if (preserveLength > 0) {
+        System.arraycopy(oldArray, 0, newArray, 0, preserveLength);
+    }
+    return newArray;
+}

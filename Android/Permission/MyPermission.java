@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
     TextView old;
 
     // log
-    Logger logger;
+    Logger logger; // 不这样声明会导致日志写入失败
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

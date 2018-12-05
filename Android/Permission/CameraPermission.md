@@ -41,3 +41,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 ```
+
+### shouldShowRequestPermissionRationale
+在允许和不再提示后，为false;  
+在第一次打开程序和拒绝后为true。  

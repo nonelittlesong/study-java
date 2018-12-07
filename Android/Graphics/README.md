@@ -22,3 +22,8 @@
 paint.setStrokeJoin(Paint.Join.ROUND); // 设置连接处为圆形
 paint.setStrokeCap(Paint.Cap.ROUND); // 设置线冒为圆形
 ```
+
+**4. Paint的Dither**  
+```
+paint.setDither(true); // 防抖动
+```

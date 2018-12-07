@@ -9,3 +9,4 @@ references:
 | [MaryPopup](https://github.com/Meetic/MaryPopup) | | |
 | [PopupMenuView](https://github.com/kareluo/PopupMenuView) | | |
 | [HintPopupWindow](https://github.com/Zhaoss/HintPopupWindow) | | |
+| [PopupListView](https://github.com/Baobomb/PopupListView) | | |

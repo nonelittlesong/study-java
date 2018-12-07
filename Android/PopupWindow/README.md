@@ -8,3 +8,4 @@ references:
 | [PopupList](https://github.com/shangmingchao/PopupList) | The edit menu in Android | |
 | [MaryPopup](https://github.com/Meetic/MaryPopup) | | |
 | [PopupMenuView](https://github.com/kareluo/PopupMenuView) | | |
+| [HintPopupWindow](https://github.com/Zhaoss/HintPopupWindow) | | |

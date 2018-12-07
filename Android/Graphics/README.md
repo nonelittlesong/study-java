@@ -1,6 +1,6 @@
 
 
-## 一、Paint
+## 一、 Paint
 **1. Paint的Flag**  
 1. Paint.ANTI_ALIAS_FLAG ： 抗锯齿标志
 1. Paint.FILTER_BITMAP_FLAG : 使位图过滤的位掩码标志
@@ -27,3 +27,5 @@ paint.setStrokeCap(Paint.Cap.ROUND); // 设置线冒为圆形
 ```
 paint.setDither(true); // 防抖动
 ```
+
+## 二、 Canvas

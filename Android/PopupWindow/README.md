@@ -15,3 +15,4 @@ references:
 | [WeiboPopupWindow](https://github.com/gqdy365/WeiboPopupWindow) | 新浪微博菜单弹出 | |
 | [FloatingWindowDemo](https://github.com/klinker24/FloatingWindowDemo) | | |
 | [PopupCircleMenu](https://github.com/panshen/PopupCircleMenu) | | |
+| [PowerMenu](https://github.com/skydoves/PowerMenu) | | |

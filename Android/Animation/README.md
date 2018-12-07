@@ -16,6 +16,12 @@
 1. Paint.Style.FILL_AND_STROKE : 填充和描边
 1. Paint.Style.STROKE : 描边
 
+**3. Paint的Cap和Join**  
+```
+paint.setStrokeJoin(Paint.Join.ROUND); // 设置连接处为圆形
+paint.setStrokeCap(Paint.Cap.ROUND); // 设置线冒为圆形
+```
+
 ## 二、ValueAnimator
 [Android属性动画之ValueAnimator的介绍](https://www.cnblogs.com/huolongluo/p/6792362.html)  
 它简单的来说，就是一个数值发生器，它可以产生你想要的各种数值。其实，在Android属性动画中，如何产生每一步具体实现动画效果，都是通过ValueAnimator计算出来的。  

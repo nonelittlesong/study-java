@@ -1,4 +1,16 @@
 
+## Paint
+**1. Paint的Flag**  
+1. Paint.ANTI_ALIAS_FLAG ：抗锯齿标志
+1. Paint.FILTER_BITMAP_FLAG : 使位图过滤的位掩码标志
+1. Paint.DITHER_FLAG : 使位图进行有利的抖动的位掩码标志
+1. Paint.UNDERLINE_TEXT_FLAG : 下划线
+1. Paint.STRIKE_THRU_TEXT_FLAG : 中划线
+1. Paint.FAKE_BOLD_TEXT_FLAG : 加粗
+1. Paint.LINEAR_TEXT_FLAG : 使文本平滑线性扩展的油漆标志
+1. Paint.SUBPIXEL_TEXT_FLAG : 使文本的亚像素定位的绘图标志
+1. Paint.EMBEDDED_BITMAP_TEXT_FLAG : 绘制文本时允许使用位图字体的绘图标志
+
 ## ValueAnimator
 [Android属性动画之ValueAnimator的介绍](https://www.cnblogs.com/huolongluo/p/6792362.html)  
 它简单的来说，就是一个数值发生器，它可以产生你想要的各种数值。其实，在Android属性动画中，如何产生每一步具体实现动画效果，都是通过ValueAnimator计算出来的。  

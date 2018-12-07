@@ -10,3 +10,4 @@ references:
 | [PopupMenuView](https://github.com/kareluo/PopupMenuView) | | |
 | [HintPopupWindow](https://github.com/Zhaoss/HintPopupWindow) | | |
 | [PopupListView](https://github.com/Baobomb/PopupListView) | | |
+| [react-native-touch-id](https://github.com/naoufal/react-native-touch-id) | | |

@@ -30,7 +30,7 @@ try {
 String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();
 
 /**
- * 4. 转字符串到String
+ * 4. 转字符串到Date
  */
 java.util.Date = java.text.DateFormat.getDateInstance().parse(date String);
 // 或者

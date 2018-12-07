@@ -13,3 +13,4 @@ references:
 | [react-native-touch-id](https://github.com/naoufal/react-native-touch-id) | | |
 | [PopupButton](https://github.com/crazyhl/PopupButton) | 模仿大众点评的筛选框 | |
 | [WeiboPopupWindow](https://github.com/gqdy365/WeiboPopupWindow) | 新浪微博菜单弹出 | |
+| [FloatingWindowDemo](https://github.com/klinker24/FloatingWindowDemo) | | |

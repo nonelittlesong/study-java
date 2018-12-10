@@ -1,5 +1,7 @@
 ```java
     /**
+     * 动画执行过程中拦截MotionEvent
+     *
      * Implement this method to intercept all touch screen motion events.  This
      * allows you to watch events as they are dispatched to your children, and
      * take ownership of the current gesture at any point.

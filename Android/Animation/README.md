@@ -86,3 +86,65 @@ public void addUpdateListener(AnimatorUpdateListener listener) {
         return this;
     }
 ```
+#### 6. start(boolean playBackwards)
+开始动画。  
+调用它的线程Looper不能为空。  
+```java
+
+    /**
+     * Start the animation playing. This version of start() takes a boolean flag that indicates
+     * whether the animation should play in reverse. The flag is usually false, but may be set
+     * to true if called from the reverse() method.
+     *
+     * <p>The animation started by calling this method will be run on the thread that called
+     * this method. This thread should have a Looper on it (a runtime exception will be thrown if
+     * this is not the case). Also, if the animation will animate
+     * properties of objects in the view hierarchy, then the calling thread should be the UI
+     * thread for that view hierarchy.</p>
+     *
+     * @param playBackwards Whether the ValueAnimator should start playing in reverse.
+     */
+    private void start(boolean playBackwards) {
+        if (Looper.myLooper() == null) {
+            throw new AndroidRuntimeException("Animators may only be run on Looper threads");
+        }
+        mReversing = playBackwards;
+        mSelfPulse = !mSuppressSelfPulseRequested;
+        // Special case: reversing from seek-to-0 should act as if not seeked at all.
+        if (playBackwards && mSeekFraction != -1 && mSeekFraction != 0) {
+            if (mRepeatCount == INFINITE) {
+                // Calculate the fraction of the current iteration.
+                float fraction = (float) (mSeekFraction - Math.floor(mSeekFraction));
+                mSeekFraction = 1 - fraction;
+            } else {
+                mSeekFraction = 1 + mRepeatCount - mSeekFraction;
+            }
+        }
+        mStarted = true;
+        mPaused = false;
+        mRunning = false;
+        mAnimationEndRequested = false;
+        // Resets mLastFrameTime when start() is called, so that if the animation was running,
+        // calling start() would put the animation in the
+        // started-but-not-yet-reached-the-first-frame phase.
+        mLastFrameTime = -1;
+        mFirstFrameTime = -1;
+        mStartTime = -1;
+        addAnimationCallback(0);
+
+        if (mStartDelay == 0 || mSeekFraction >= 0 || mReversing) {
+            // If there's no start delay, init the animation and notify start listeners right away
+            // to be consistent with the previous behavior. Otherwise, postpone this until the first
+            // frame after the start delay.
+            startAnimation();
+            if (mSeekFraction == -1) {
+                // No seek, start at play time 0. Note that the reason we are not using fraction 0
+                // is because for animations with 0 duration, we want to be consistent with pre-N
+                // behavior: skip to the final value immediately.
+                setCurrentPlayTime(0);
+            } else {
+                setCurrentFraction(mSeekFraction);
+            }
+        }
+    }
+```

@@ -51,7 +51,7 @@ public class StatusDialog extends Dialog {
  * 自定义注解默认是CLASS
  */
 
-        @IntDef({
+    @IntDef({
             VerticalPosition.CENTER,
             VerticalPosition.ABOVE,
             VerticalPosition.BELOW,

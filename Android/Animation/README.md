@@ -63,7 +63,7 @@ public void addUpdateListener(AnimatorUpdateListener listener) {
             mInterpolator = new LinearInterpolator();
         }
     }
-    ```
+```
 #### 5. setDuration(long duration)
 设置动画时长。默认是300毫秒。
 ```java

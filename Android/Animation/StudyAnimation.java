@@ -46,3 +46,33 @@
         // assume we will change the bounds
         return true;
     }
+
+    /**
+     * 动画开始，结束和重复时调用，
+     * <p>An animation listener receives notifications from an animation.
+     * Notifications indicate animation related events, such as the end or the
+     * repetition of the animation.</p>
+     */
+    public static interface AnimationListener {
+        /**
+         * <p>Notifies the start of the animation.</p>
+         *
+         * @param animation The started animation.
+         */
+        void onAnimationStart(Animation animation);
+
+        /**
+         * <p>Notifies the end of the animation. This callback is not invoked
+         * for animations with repeat count set to INFINITE.</p>
+         *
+         * @param animation The animation which reached its end.
+         */
+        void onAnimationEnd(Animation animation);
+
+        /**
+         * <p>Notifies the repetition of the animation.</p>
+         *
+         * @param animation The animation which was repeated.
+         */
+        void onAnimationRepeat(Animation animation);
+    }

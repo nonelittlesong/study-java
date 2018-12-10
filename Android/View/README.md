@@ -1,6 +1,7 @@
 
 ## 一、 GestureDetector
 View可以实现基本的触摸操作，更复杂的双击，滑动需要GestureDetector。  
+构造函数：   
 ```
 /**
      * Creates a GestureDetector with the supplied listener.
@@ -18,7 +19,24 @@ View可以实现基本的触摸操作，更复杂的双击，滑动需要Gesture
     }
 ```
 ### 1. OnGestureListener
-
+**boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY)**  
+```
+/**
+         * Notified when a scroll occurs with the initial on down {@link MotionEvent} and the
+         * current move {@link MotionEvent}. The distance in x and y is also supplied for
+         * convenience.
+         *
+         * @param e1 The first down motion event that started the scrolling.
+         * @param e2 The move motion event that triggered the current onScroll.
+         * @param distanceX The distance along the X axis that has been scrolled since the last
+         *              call to onScroll. This is NOT the distance between {@code e1}
+         *              and {@code e2}.
+         * @param distanceY The distance along the Y axis that has been scrolled since the last
+         *              call to onScroll. This is NOT the distance between {@code e1}
+         *              and {@code e2}.
+         * @return true if the event is consumed, else false
+         */
+```
 ### 2. OnDoubleTapListener
 ### 3. OnContextClickListener
 ### 4. SimpleOnGestureListener

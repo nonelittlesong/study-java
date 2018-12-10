@@ -1,5 +1,5 @@
 
-## 一、 estureDetector
+## 一、 GestureDetector
 ### 1. OnGestureListener
 ### 2. OnDoubleTapListener
 ### 3. OnContextClickListener

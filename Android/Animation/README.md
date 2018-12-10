@@ -34,6 +34,37 @@ public void setFloatValues(float... values) {
 #### 3. addUpdateListener(AnimatorUpdateListener listener)
 每一帧要执行的操作。  
 ```java
+        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            private final ArgbEvaluator colorEvaluator = new ArgbEvaluator();
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                alpha = (float) valueAnimator.getAnimatedValue();
+                updateArrowPath();
+                if (switchColor) {
+                    updateColor(colorEvaluator);
+                }
+                postInvalidateOnAnimationCompat();
+            }
+        });
+
+    /**
+     * <p>Cause an invalidate to happen on the next animation time step, typically the
+     * next display frame.</p>
+     *
+     * <p>This method can be invoked from outside of the UI thread
+     * only when this View is attached to a window.</p>
+     *
+     * @see #invalidate()
+     */
+    public void postInvalidateOnAnimation() {
+        // We try only with the AttachInfo because there's no point in invalidating
+        // if we are not attached to our window
+        final AttachInfo attachInfo = mAttachInfo;
+        if (attachInfo != null) {
+            attachInfo.mViewRootImpl.dispatchInvalidateOnAnimation(this);
+        }
+    }
+
 /**
  * Adds a listener to the set of listeners that are sent update events through the life of
  * an animation. This method is called on all listeners for every frame of the animation, 

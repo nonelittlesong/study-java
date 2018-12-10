@@ -50,3 +50,20 @@ public class StatusDialog extends Dialog {
  * RetentionPolicy.RUNTIME: 在运行时有效
  * 自定义注解默认是CLASS
  */
+
+        @IntDef({
+            VerticalPosition.CENTER,
+            VerticalPosition.ABOVE,
+            VerticalPosition.BELOW,
+            VerticalPosition.ALIGN_TOP,
+            VerticalPosition.ALIGN_BOTTOM,
+    })
+    @Retention(RetentionPolicy.SOURCE)
+    public @interface VerticalPosition {
+        int CENTER = 0;
+        int ABOVE = 1;
+        int BELOW = 2;
+        int ALIGN_TOP = 3;
+        int ALIGN_BOTTOM = 4;
+    }
+    

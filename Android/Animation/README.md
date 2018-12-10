@@ -9,7 +9,7 @@ https://github.com/nonelittlesong/study-java/blob/master/Android/Graphics/README
 #### 1. ValueAnimator ofFloat(float... values)
 构造函数。返回在给定的values间animate的ValueAnimator。
 #### 2. setFloatValues(float... values)
-```
+```java
 public void setFloatValues(float... values) {
     if (values == null || values.length == 0) {
         return;
@@ -25,7 +25,7 @@ public void setFloatValues(float... values) {
     }
 ```
 #### 3. addUpdateListener(AnimatorUpdateListener listener)
-```
+```java
 /**
  * Adds a listener to the set of listeners that are sent update events through the life of
  * an animation. This method is called on all listeners for every frame of the animation, 
@@ -45,7 +45,7 @@ public void addUpdateListener(AnimatorUpdateListener listener) {
 计算动画经过的片段。  
 可以是线性或非线性。例如acceleration和deceleration。  
 默认是android.view.animation.AccelerateDecelerateInterpolator。  
-```
+```java
     /**
      * The time interpolator used in calculating the elapsed fraction of this animation. The
      * interpolator determines whether the animation runs with linear or non-linear motion,
@@ -64,3 +64,25 @@ public void addUpdateListener(AnimatorUpdateListener listener) {
         }
     }
     ```
+#### 5. setDuration(long duration)
+设置动画时长。默认是300毫秒。
+```java
+    /**
+     * Sets the length of the animation. The default duration is 300 milliseconds.
+     *
+     * @param duration The length of the animation, in milliseconds. This value cannot
+     * be negative.
+     * @return ValueAnimator The object called with setDuration(). This return
+     * value makes it easier to compose statements together that construct and then set the
+     * duration, as in <code>ValueAnimator.ofInt(0, 10).setDuration(500).start()</code>.
+     */
+    @Override
+    public ValueAnimator setDuration(long duration) {
+        if (duration < 0) {
+            throw new IllegalArgumentException("Animators cannot have negative duration: " +
+                    duration);
+        }
+        mDuration = duration;
+        return this;
+    }
+```

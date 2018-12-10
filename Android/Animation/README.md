@@ -40,3 +40,27 @@ public void addUpdateListener(AnimatorUpdateListener listener) {
     mUpdateListeners.add(listener)   
 }
 ```
+#### 4. setInterpolator(TimeInterpolator value)
+插入器。  
+计算动画经过的片段。  
+可以是线性或非线性。例如acceleration和deceleration。  
+默认是android.view.animation.AccelerateDecelerateInterpolator。  
+```
+    /**
+     * The time interpolator used in calculating the elapsed fraction of this animation. The
+     * interpolator determines whether the animation runs with linear or non-linear motion,
+     * such as acceleration and deceleration. The default value is
+     * {@link android.view.animation.AccelerateDecelerateInterpolator}
+     *
+     * @param value the interpolator to be used by this animation. A value of <code>null</code>
+     * will result in linear interpolation.
+     */
+    @Override
+    public void setInterpolator(TimeInterpolator value) {
+        if (value != null) {
+            mInterpolator = value;
+        } else {
+            mInterpolator = new LinearInterpolator();
+        }
+    }
+    ```

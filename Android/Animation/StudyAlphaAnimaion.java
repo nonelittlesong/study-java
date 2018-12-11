@@ -1,4 +1,5 @@
-    /**
+// https://blog.csdn.net/shibin1990_/article/details/51602498    
+/**
      * 和透明度相关的动画
      * Constructor to use when building an AlphaAnimation from code
      * 

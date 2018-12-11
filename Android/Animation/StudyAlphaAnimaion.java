@@ -28,10 +28,12 @@
         mFillAfter = fillAfter;
     }
     
-/*
+/**
+ * 使用步骤
+ */
 AlphaAnimation alphaAnimation = new AlphaAnimation(alpha, alpha);
 // make it instant
 alphaAnimation.setDuration(0);
 alphaAnimation.setFillAfter(true);
 view.startAnimation(alphaAnimation);
-*/
+

@@ -90,3 +90,9 @@ mTabLayout.setupWithViewPager(mViewPager);
         }
     }
 ```
+## 一、 得到和设置当前的Page
+```java
+// 得到当前pageID，保存到Activity的Bundle
+bundle.putInt(POSITION, mTabLayout.getSelectedTabPosition());
+// 获取Bundle中保存的pageID并付给ViewPager
+mViewPager.setCurrentItem(bundle.getInt(POSITION));

@@ -1,5 +1,23 @@
+Pager的使用步骤：  
+1. 创建Adapter
+2. ViewPager和Adapter绑定
+3. TabLayout和ViewPager绑定
+
 ```java
+// 创建Adapter
+mSectionsPagerAdapter = new SectionPagerAdapter(getSupportFragmentManager());
+// ViewPager绑定Adapter
+mViewPager.setAdapter(mSectionPagerAdapter);
+// TabLayout绑定ViewPager
+mTabLayout.setupWithViewPager(mViewPager);
+
     /**
+     * SectionPagerAdapter的实现
+     * 继承自FragmentPagerAdapter
+     * 1. 根据position获取Fragment，实现getItem
+     * 2. 获取Page的数量，getCount
+     * 3. 根据position获取标题，getPageTitle
+     *
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      */

@@ -19,3 +19,4 @@ View绘制分三个步骤，顺序是：onMeasure，onLayout，onDraw。调用in
         mViewPager.setCurrentItem(savedInstanceState.getInt(POSITION));
     }
 ```
+## Use View.isInEditMode() in your custom views to skip code when shown in Eclipse

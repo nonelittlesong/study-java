@@ -1,3 +1,5 @@
+测试程序时，适当延长动画时间，以便观察效果。  
+
 
 ## 一、Paint
 https://github.com/nonelittlesong/study-java/blob/master/Android/Graphics/README.md  

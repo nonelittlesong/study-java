@@ -16,7 +16,7 @@ references:
 | [FloatingWindowDemo](https://github.com/klinker24/FloatingWindowDemo) | | |
 | [PopupCircleMenu](https://github.com/panshen/PopupCircleMenu) | | |
 | [PowerMenu](https://github.com/skydoves/PowerMenu) | | |
-| [BottomSheet](https://github.com/Blincheng/BottomSheet) | | |
+| [BottomSheet](https://github.com/Blincheng/BottomSheet) | 一个从底部向上弹出的Dialog | |
 
 ## PopupWindow
 package android.widget;  

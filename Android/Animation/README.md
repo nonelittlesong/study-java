@@ -4,3 +4,10 @@ To initiate a layout, call requestLayout().This method is typically called by a 
 ## android:gravity
 FrameLayout此属性无效。  
 可以在子视图中使用`android:layout_gravity`达到想要的效果。  
+## [在不传父View的情况下Infate最外层layout设置宽高失效](https://www.cnblogs.com/tieba/p/4844744.html)
+给最外层layout设置固定宽高，然后使用inflate(layoutId, null )方式加载，则layoutId的最外层的控件的宽高是没有效果的。  
+inflate对外主要有两种函数实现：  
+public View inflate(int resource, ViewGroup root);  
+public View inflate(int resource, ViewGroup root, boolean attachToRoot);  
+这两个函数最终都会调用public View inflate(XmlPullParser parser, ViewGroup root, boolean attachToRoot)函数。  
+只有在root!=null的情况下才会根据xml参数（attrs）创建并设置LayoutParams。  

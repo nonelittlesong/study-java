@@ -13,3 +13,11 @@ public View inflate(int resource, ViewGroup root);
 public View inflate(int resource, ViewGroup root, boolean attachToRoot);  
 这两个函数最终都会调用public View inflate(XmlPullParser parser, ViewGroup root, boolean attachToRoot)函数。  
 只有在root!=null的情况下才会根据xml参数（attrs）创建并设置LayoutParams。  
+## [代码中设置layout_gravity](https://blog.csdn.net/jmflovezlf/article/details/41049791)  
+```java
+final View contentView = View.inflate(context, contentID, null);// contentView是FrameLayout的子View
+contentView.measure(0,0);
+FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(contentView.getMeasuredWidth(), contentView.getMeasuredHeight());
+params.gravity = Gravity.END;
+contentView.setLayoutParams(params);
+```

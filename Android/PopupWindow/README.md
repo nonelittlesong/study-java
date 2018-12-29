@@ -17,6 +17,7 @@ references:
 | [PopupCircleMenu](https://github.com/panshen/PopupCircleMenu) | | |
 | [PowerMenu](https://github.com/skydoves/PowerMenu) | | |
 | [BottomSheet](https://github.com/Blincheng/BottomSheet) | 一个从底部向上弹出的Dialog | |
+| [Xpopup](https://github.com/li-xiaojun/XPopup) | 功能强大，UI简洁，交互优雅的通用弹窗！ | |
 
 ## PopupWindow
 package android.widget;  

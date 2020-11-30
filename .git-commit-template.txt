@@ -1,0 +1,21 @@
+# Type(<scope>): <subject>
+
+# <body>
+
+# <footer>
+
+# type 必须是以下几种选项之一：
+# * feat (新功能)
+# * fix (修补 bug)
+# * docs (更改文档)
+# * style (格式化，忘写分号，等等；没有代码改动)
+# * refactor (重构产品代码)
+# * test (添加缺少的测试，重构测试；没有产品代码改动)
+# * chore (更新 grunt 任务等；没有生产代码改动)
+# Scope 是变动的范围。如 (admin) 或 (teacher)。
+# Subject 应该使用 impertivite 的语气，说你做了什么
+# Body 说明改动的细节
+# Footer 包含 JIRA (或其他工具) issue references 或 actions
+
+# 完整的例子，请看这里
+# https://github.com/sparkbox/standard/tree/master/code-style/git

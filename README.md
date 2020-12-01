@@ -4,7 +4,7 @@
 * http://mvnrepository.com/
 * https://docs.gradle.org/current/userguide/userguide.html
 
-**wiki**  
+**android wiki**  
 * [build.gradle 和 JNI 和 NDK](https://github.com/nonelittlesong/study-java/wiki/build.gradle)
 * [JNI](https://github.com/nonelittlesong/study-java/wiki/jni)
 * [AS 的 ImageView 转 Bitmap](https://github.com/nonelittlesong/study-java/wiki/ImageViewtoBitmap)

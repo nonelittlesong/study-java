@@ -32,6 +32,12 @@ org.eclipse.swt.SWTError: No more handles
 - [org.eclipse.swt.SWTError while running eclipse on ubuntu | StackExchange](https://unix.stackexchange.com/questions/94497/org-eclipse-swt-swterror-no-more-handles-gtk-init-check-failed-while-runnin)
 - [查看 Eclipse 运行的 GTK 版本 | Eclipse Wiki](https://wiki.eclipse.org/SWT/Devel/Gtk/GtkVersion)
 
+### 1.1. 其他版本的 STS
+
+- [STSs | Pivotal](https://github.com/spring-projects/toolsuite-distribution/wiki/Spring-Tool-Suite-3)
+- [STS for e4.6](http://download.springsource.com/release/TOOLS/update/3.8.4.RELEASE/e4.6/springsource-tool-suite-3.8.4.RELEASE-e4.6.3-updatesite.zip)
+- [STSs | OSChina](https://my.oschina.net/openoschina/blog/3013939)
+
 ## 2. 查看 Ecplise 运行的 GTK 版本
 
 ### 2.1. 通过配置
@@ -76,3 +82,4 @@ dpkg -l libgtk2.0-0 libgtk-3-0
 - 如果是通过如 `yum/dnf` 下载，lint 文件在 `/etc/` 目录下
 
 :warning: Lint 文件只能决定大版本 2 或 3，不能决定小版本！
+

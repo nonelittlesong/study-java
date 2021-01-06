@@ -65,7 +65,7 @@ javax.persistence:
 </tbody>
 </table>
 
-## 1.1. @EnableJapRepositories
+## 1.1. @EnableJpaRepositories
 
 用于取代 xml 形式的配置文件。
 
@@ -113,3 +113,75 @@ javax.persistence:
 ```diff
 - Not a managed type: com.demo.domain.Customer
 ```
+
+## 属性
+
+### @Column
+
+将属性或 field 映射指定的列。
+
+```java
+// Example 1:
+@Column(name="DESC", nullable=false, length=512)
+public String getDescription() { return description; }
+
+// Example 2:
+@Column(name="DESC",
+        columnDefinition="CLOB NOT NULL",
+        table="EMP_DETAIL")
+@Lob
+public String getDescription() { return description; }
+
+// Example 3:
+@Column(name="ORDER_COST", updatable=false, precision=12, scale=2)
+public BigDecimal getCost() { return cost; }
+```
+
+元素：
+
+- `name` — 列名，默认属性或 field 名。
+- `unique`
+- `nullable` — 默认 true。
+- `insertable`
+
+
+### @Id
+
+设定主键。
+
+### @GeneratedValue
+
+只支持简单主键，不支持派生主键。
+
+```java
+// Example 1:
+
+@Id
+@GeneratedValue(strategy=SEQUENCE, generator="CUST_SEQ")
+@Column(name="CUST_ID")
+public Long getId() { return id; }
+
+// Example 2:
+
+@Id
+@GeneratedValue(strategy=TABLE, generator="CUST_GEN")
+@Column(name="CUST_ID")
+Long id;
+```
+
+[GenerationType](https://docs.oracle.com/javaee/7/api/javax/persistence/GenerationType.html):
+
+- TABLE
+- SEQUENCE
+- IDENTITY
+- AUTO
+
+### @Temporal
+
+只能用于 `java.util.Date` 和 `java.util.Calendar`。
+
+[TemporalType](https://docs.oracle.com/javaee/7/api/javax/persistence/TemporalType.html):
+
+- `DATE` — 映射 `java.sql.Date`
+- `TIME` — 映射 `java.sql.Time`
+- `TIMESTAMP` — 映射 `java.sql.Timestamp`
